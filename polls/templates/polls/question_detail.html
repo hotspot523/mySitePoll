@@ -1,0 +1,15 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+<div>
+
+{% for q in question %}
+    {{ q.id }}
+    {{ q.question_text }}
+    {{ q.choice_text }}
+    {{ q.votes }}
+    <br>
+{% endfor %}
+
+</div>
+{% endblock %}

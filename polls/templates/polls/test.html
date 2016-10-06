@@ -1,0 +1,15 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+<div class="post">
+
+    <a class="btn btn-default" href="{% url 'polls:post_edit' pk=question.id %}"><span
+            class="glyphicon glyphicon-pencil"></span></a>
+
+    <h3>Q: {{ question.question_text}}</h3>
+    Date: <p>{{ question.pub_date }}</p>
+    Choice: <p>{{ question.choice_text }}</p>
+    Votes: <p>{{ question.votes }}</p>
+
+</div>
+{% endblock %}
